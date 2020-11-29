@@ -52,7 +52,8 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CapsuleShape2D" id=4]
-height = 30.2455
+radius = 4.87769
+height = 35.8047
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 8, 16.0831 )
@@ -76,18 +77,9 @@ anims/Idle = SubResource( 3 )
 script = ExtResource( 5 )
 
 [node name="Player Collision Box" type="CollisionShape2D" parent="."]
+position = Vector2( -1.42218, 5.13379 )
 scale = Vector2( -5.69411, -1.96486 )
 shape = SubResource( 4 )
-
-[node name="Main Camera" type="Camera2D" parent="."]
-current = true
-limit_bottom = 1000
-limit_smoothed = true
-smoothing_enabled = true
-drag_margin_left = 0.0
-drag_margin_top = 0.0
-drag_margin_right = 0.0
-drag_margin_bottom = 0.0
 
 [node name="Face" type="Area2D" parent="."]
 collision_layer = 2

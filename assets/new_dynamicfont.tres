@@ -1,0 +1,6 @@
+[gd_resource type="DynamicFont" format=2]
+
+[resource]
+size = 200
+outline_size = 200
+outline_color = Color( 0, 0, 0, 1 )

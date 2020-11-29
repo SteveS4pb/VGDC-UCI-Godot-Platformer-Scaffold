@@ -1,21 +1,22 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/sprites/temp sprites/temp_filecabinet_open_top.png" type="Texture" id=1]
 [ext_resource path="res://assets/sprites/temp sprites/temp_filecabinet_open_bottom.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/temp sprites/temp_filecabinet_closed.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/temp sprites/temp_filecabinet_open_middle.png" type="Texture" id=4]
 [ext_resource path="res://prefabs/FileCabinet.gd" type="Script" id=5]
+[ext_resource path="res://assets/sprites/temp sprites/temp_blank_file.png" type="Texture" id=6]
+[ext_resource path="res://assets/sprites/temp sprites/temp_file_folder.png" type="Texture" id=7]
+[ext_resource path="res://assets/fonts/temp_file_font.tres" type="DynamicFont" id=8]
+[ext_resource path="res://prefabs/File.gd" type="Script" id=9]
+[ext_resource path="res://prefabs/File3.gd" type="Script" id=10]
+[ext_resource path="res://prefabs/File2.gd" type="Script" id=11]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "closed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "open_middle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ) ],
@@ -27,12 +28,22 @@ animations = [ {
 "loop": true,
 "name": "open_top",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "open_middle",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 52.5757, 59.9318 )
+extents = Vector2( 15.2554, 59.9318 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 133.623, 180.416 )
 
 [node name="FileCabinet" type="StaticBody2D"]
+scale = Vector2( 1, 1.2 )
+z_index = -1
 script = ExtResource( 5 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
@@ -44,5 +55,101 @@ animation = "closed"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NearFileCabinet"]
 shape = SubResource( 2 )
+
+[node name="Folder" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -75 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 7 )
+
+[node name="File" type="Area2D" parent="Folder"]
+position = Vector2( -300, -370 )
+script = ExtResource( 9 )
+
+[node name="FileSprite" type="Sprite" parent="Folder/File"]
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="Folder/File/FileSprite"]
+anchor_left = -0.721
+anchor_top = 0.303
+anchor_right = -0.721
+anchor_bottom = 0.303
+margin_left = 521.925
+margin_top = -1500.43
+margin_right = 1785.93
+margin_bottom = -97.4315
+rect_min_size = Vector2( 12, 14 )
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Folder/File"]
+shape = SubResource( 3 )
+
+[node name="File2" type="Area2D" parent="Folder"]
+position = Vector2( 0, -430 )
+script = ExtResource( 11 )
+
+[node name="FileSprite" type="Sprite" parent="Folder/File2"]
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="Folder/File2/FileSprite"]
+anchor_left = -0.721
+anchor_top = 0.303
+anchor_right = -0.721
+anchor_bottom = 0.303
+margin_left = 521.925
+margin_top = -1500.43
+margin_right = 1785.93
+margin_bottom = -97.4315
+rect_min_size = Vector2( 12, 14 )
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Folder/File2"]
+shape = SubResource( 3 )
+
+[node name="File3" type="Area2D" parent="Folder"]
+position = Vector2( 300, -370 )
+script = ExtResource( 10 )
+
+[node name="FileSprite" type="Sprite" parent="Folder/File3"]
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="Folder/File3/FileSprite"]
+anchor_left = -0.721
+anchor_top = 0.303
+anchor_right = -0.721
+anchor_bottom = 0.303
+margin_left = 521.925
+margin_top = -1500.43
+margin_right = 1785.93
+margin_bottom = -97.4315
+rect_min_size = Vector2( 12, 14 )
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = ExtResource( 8 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Folder/File3"]
+shape = SubResource( 3 )
 [connection signal="body_entered" from="NearFileCabinet" to="." method="_on_NearFileCabinet_body_entered"]
 [connection signal="body_exited" from="NearFileCabinet" to="." method="_on_NearFileCabinet_body_exited"]
