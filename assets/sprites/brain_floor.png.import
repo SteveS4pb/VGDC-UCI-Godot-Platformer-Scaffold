@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Window_POP_Up.png-f8b3bde84f4b93bc68809ac6712ef1f8.stex"
+path="res://.import/brain_floor.png-253f9ec6a264923514bc5567e6b74622.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Window_POP_Up.png"
-dest_files=[ "res://.import/Window_POP_Up.png-f8b3bde84f4b93bc68809ac6712ef1f8.stex" ]
+source_file="res://assets/sprites/brain_floor.png"
+dest_files=[ "res://.import/brain_floor.png-253f9ec6a264923514bc5567e6b74622.stex" ]
 
 [params]
 

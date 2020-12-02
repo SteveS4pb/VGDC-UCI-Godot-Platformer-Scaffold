@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/temp_tiles.png-5ede9fb87f2a04e6e6e6b5e5143b8d42.stex"
+path="res://.import/brain_wall.png-347a87bd2f07cd3d5891e6d92ffd7d72.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/temp sprites/temp_tiles.png"
-dest_files=[ "res://.import/temp_tiles.png-5ede9fb87f2a04e6e6e6b5e5143b8d42.stex" ]
+source_file="res://assets/sprites/brain_wall.png"
+dest_files=[ "res://.import/brain_wall.png-347a87bd2f07cd3d5891e6d92ffd7d72.stex" ]
 
 [params]
 

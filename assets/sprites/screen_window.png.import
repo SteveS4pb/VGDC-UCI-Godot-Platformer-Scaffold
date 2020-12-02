@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/terminal_v1.png-29ff2c75eba55d9c7ceff27a0a6e1d4d.stex"
+path="res://.import/screen_window.png-d43b3d90f75366a7d3454a7e24eeb0b1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/temp sprites/terminal_v1.png"
-dest_files=[ "res://.import/terminal_v1.png-29ff2c75eba55d9c7ceff27a0a6e1d4d.stex" ]
+source_file="res://assets/sprites/screen_window.png"
+dest_files=[ "res://.import/screen_window.png-d43b3d90f75366a7d3454a7e24eeb0b1.stex" ]
 
 [params]
 

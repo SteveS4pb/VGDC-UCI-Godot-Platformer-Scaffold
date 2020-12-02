@@ -4,13 +4,17 @@
 [ext_resource path="res://assets/sprites/temp sprites/temp_filecabinet_open_bottom.png" type="Texture" id=2]
 [ext_resource path="res://assets/sprites/temp sprites/temp_filecabinet_closed.png" type="Texture" id=3]
 [ext_resource path="res://assets/sprites/temp sprites/temp_filecabinet_open_middle.png" type="Texture" id=4]
-[ext_resource path="res://prefabs/FileCabinet.gd" type="Script" id=5]
+[ext_resource path="res://scripts/FileCabinet.gd" type="Script" id=5]
 [ext_resource path="res://assets/sprites/temp sprites/temp_blank_file.png" type="Texture" id=6]
 [ext_resource path="res://assets/sprites/temp sprites/temp_file_folder.png" type="Texture" id=7]
 [ext_resource path="res://assets/fonts/temp_file_font.tres" type="DynamicFont" id=8]
-[ext_resource path="res://prefabs/File.gd" type="Script" id=9]
-[ext_resource path="res://prefabs/File3.gd" type="Script" id=10]
-[ext_resource path="res://prefabs/File2.gd" type="Script" id=11]
+[ext_resource path="res://scripts/File.gd" type="Script" id=9]
+[ext_resource path="res://scripts/File3.gd" type="Script" id=10]
+[ext_resource path="res://scripts/File2.gd" type="Script" id=11]
+
+
+
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
