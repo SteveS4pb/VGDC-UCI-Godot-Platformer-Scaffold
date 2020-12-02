@@ -14,4 +14,3 @@
 [node name="Hazards" parent="." instance=ExtResource( 3 )]
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
-

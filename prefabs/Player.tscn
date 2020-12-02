@@ -52,6 +52,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="CapsuleShape2D" id=4]
+radius = 5.32748
 height = 30.2455
 
 [sub_resource type="RectangleShape2D" id=5]
@@ -76,6 +77,7 @@ anims/Idle = SubResource( 3 )
 script = ExtResource( 5 )
 
 [node name="Player Collision Box" type="CollisionShape2D" parent="."]
+position = Vector2( -0.629944, 9.70923 )
 scale = Vector2( -5.69411, -1.96486 )
 shape = SubResource( 4 )
 

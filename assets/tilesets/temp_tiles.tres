@@ -5,14 +5,14 @@
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 100, 0, 100, 100, 0, 100 )
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
-points = PoolVector2Array( 100, 100, 0, 100, 0, 0, 100, 0 )
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 100, 27, 0, 27, 0, 2, 100, 2 )
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 100, 100, 0, 100, 0, 0, 100, 0 )
 
 [resource]
-0/name = "temp_tiles.png 0"
+0/name = "top_tile.png 0"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
@@ -33,7 +33,7 @@ points = PoolVector2Array( 100, 100, 0, 100, 0, 0, 100, 0 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
-1/name = "temp_tiles.png 1"
+1/name = "transition_tiles.png 1"
 1/texture = ExtResource( 1 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
@@ -43,21 +43,21 @@ points = PoolVector2Array( 100, 100, 0, 100, 0, 0, 100, 0 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 2 )
+1/shape = SubResource( 4 )
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 2 ),
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
 2/name = "temp_tiles.png 2"
 2/texture = ExtResource( 1 )
 2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
+2/modulate = Color( 0.870588, 0.741176, 0.741176, 1 )
 2/region = Rect2( 0, 500, 100, 100 )
 2/tile_mode = 0
 2/occluder_offset = Vector2( 0, 0 )
@@ -75,7 +75,7 @@ points = PoolVector2Array( 100, 100, 0, 100, 0, 0, 100, 0 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 2/z_index = 0
-3/name = "temp_tiles.png 3"
+3/name = "brain_tile.png 3"
 3/texture = ExtResource( 1 )
 3/tex_offset = Vector2( 0, 0 )
 3/modulate = Color( 1, 1, 1, 1 )
