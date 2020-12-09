@@ -35,7 +35,7 @@ func change_rooms():
 	changing_rooms = false
 	if to_terminal == 'prefrontal_cortex':
 		to_terminal = ''
-		get_tree().change_scene("res://scenes/Minigame_Calc_Files.tscn")
+		get_tree().change_scene("res://scenes/Frontal_Lobe.tscn")
 	elif to_terminal == 'temporal_lobe':
 		to_terminal = ''
 		get_tree().change_scene("res://scenes/Temporal_Lobe.tscn")
