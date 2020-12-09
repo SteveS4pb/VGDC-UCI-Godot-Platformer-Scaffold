@@ -2,6 +2,9 @@ extends KinematicBody2D
 
 export (int) var speed = 100
 var velocity = Vector2()
+var changing_rooms = false
+var to_terminal = ''
+var to_minigame = ''
 
 
 func _physics_process(delta):
@@ -24,3 +27,20 @@ func _physics_process(delta):
 		$Sprite.play("run")
 	
 	var _i = move_and_slide(velocity)
+	
+	if changing_rooms:
+		change_rooms()
+
+func change_rooms():
+	changing_rooms = false
+	if to_terminal == 'prefrontal_cortex':
+		to_terminal = ''
+		get_tree().change_scene("res://scenes/Minigame_Calc_Files.tscn")
+	elif to_terminal == 'temporal_lobe':
+		to_terminal = ''
+	elif to_terminal == 'brain_stem':
+		to_terminal = ''
+		get_tree().change_scene("res://scenes/brain_stem.tscn")
+	elif to_minigame == 'minigame_calc_files':
+		to_minigame = ''
+		get_tree().change_scene("res://scenes/Minigame_Calc_Files.tscn")

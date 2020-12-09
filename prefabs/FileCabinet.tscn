@@ -12,20 +12,11 @@
 [ext_resource path="res://scripts/File3.gd" type="Script" id=10]
 [ext_resource path="res://scripts/File2.gd" type="Script" id=11]
 
-
-
-
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "closed",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 2 ) ],
-"loop": true,
-"name": "open_bottom",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ) ],
@@ -36,6 +27,11 @@ animations = [ {
 "frames": [ ExtResource( 4 ) ],
 "loop": true,
 "name": "open_middle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "open_bottom",
 "speed": 5.0
 } ]
 
