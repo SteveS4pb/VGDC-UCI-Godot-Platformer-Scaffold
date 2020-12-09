@@ -11,6 +11,7 @@
 script = ExtResource( 4 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 550, 445 )
 
 [node name="brain_floor" type="TileMap" parent="."]
 show_behind_parent = true
