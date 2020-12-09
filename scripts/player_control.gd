@@ -38,6 +38,7 @@ func change_rooms():
 		get_tree().change_scene("res://scenes/Minigame_Calc_Files.tscn")
 	elif to_terminal == 'temporal_lobe':
 		to_terminal = ''
+		get_tree().change_scene("res://scenes/Temporal_Lobe.tscn")
 	elif to_terminal == 'brain_stem':
 		to_terminal = ''
 		get_tree().change_scene("res://scenes/brain_stem.tscn")
