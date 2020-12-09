@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://prefabs/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/tilesets/brain_wall.tres" type="TileSet" id=2]
@@ -7,11 +7,14 @@
 [ext_resource path="res://assets/sprites/temp sprites/temp_filecabinet_open_middle.png" type="Texture" id=5]
 [ext_resource path="res://assets/sprites/temp sprites/temp_filecabinet_closed.png" type="Texture" id=6]
 [ext_resource path="res://assets/sprites/temp sprites/temp_filecabinet_open_bottom.png" type="Texture" id=7]
-[ext_resource path="res://assets/sprites/terminal.png" type="Texture" id=8]
+[ext_resource path="res://scenes/Temporal_Lobe.gd" type="Script" id=8]
 [ext_resource path="res://assets/sprites/temp sprites/temp_file_folder.png" type="Texture" id=9]
 [ext_resource path="res://assets/sprites/screen_window.png" type="Texture" id=10]
+[ext_resource path="res://prefabs/MinigameTerminal.tscn" type="PackedScene" id=11]
+[ext_resource path="res://prefabs/Terminal.tscn" type="PackedScene" id=12]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 8 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 500, 750 )
@@ -198,10 +201,6 @@ texture = ExtResource( 4 )
 position = Vector2( -700, -860 )
 texture = ExtResource( 6 )
 
-[node name="terminal" type="Sprite" parent="."]
-position = Vector2( 500, 850 )
-texture = ExtResource( 8 )
-
 [node name="Mini_Game_Interact_Icon" type="Sprite" parent="."]
 show_behind_parent = true
 position = Vector2( 500, -350 )
@@ -211,3 +210,10 @@ texture = ExtResource( 10 )
 [node name="temp_file_folder" type="Sprite" parent="Mini_Game_Interact_Icon"]
 position = Vector2( -30, 30 )
 texture = ExtResource( 9 )
+
+[node name="Terminal_BrainStem" parent="." instance=ExtResource( 12 )]
+position = Vector2( 500, 850 )
+
+[node name="MinigameTerminal_Calc_Files" parent="." instance=ExtResource( 11 )]
+position = Vector2( 500, -350 )
+z_index = 0
