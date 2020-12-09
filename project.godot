@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Godot Scaffold Platformer"
-run/main_scene="res://scenes/brain_stem.tscn"
+run/main_scene="res://scenes/Brain_Stem.tscn"
 config/icon="res://assets/sprites/temp sprites/temp_idle_1.png"
 
 [display]
