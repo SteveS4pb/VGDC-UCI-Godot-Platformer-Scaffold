@@ -5,14 +5,11 @@ var velocity = Vector2()
 var changing_rooms = false
 var to_terminal = ''
 var to_minigame = ''
+var walking = false
 
 
 func _physics_process(delta):
 # Move Player vertically or horizontally if a key in 'wasd' was pressed
-#
-# Changes Player's sprite from default to run if the Player is pressing 'wasd'
-# Changes Player's sprite from run to default if the Player is not pressing 'wasd'
-	
 	velocity = Vector2()
 	velocity.x += Input.get_action_strength("right")
 	velocity.x -= Input.get_action_strength("left")
@@ -22,14 +19,25 @@ func _physics_process(delta):
 	velocity *= speed
 	
 	if (velocity.x == 0) and (velocity.y == 0):
-		$Sprite.play("default")
+		walking = false
 	else:
-		$Sprite.play("run")
+		walking = true
 	
 	var _i = move_and_slide(velocity)
 	
 	if changing_rooms:
 		change_rooms()
+
+
+func _process(delta):
+# Changes Player's sprite from idle to walk if the Player is pressing 'wasd'
+# Changes Player's sprite from walk to idle if the Player is not pressing 'wasd'
+	print(get_node("Sprite/Player Animator").current_animation)
+	if walking and get_node("Sprite/Player Animator").current_animation != "walk":
+		$Sprite.play("walk")
+	elif not walking:
+		$Sprite.play("idle")
+
 
 func change_rooms():
 	changing_rooms = false

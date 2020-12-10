@@ -1,17 +1,12 @@
 extends KinematicBody2D
 
 export (int) var speed = 100
-#var file_cabinet = load("res://prefabs/FileCabinet.gd")
 var velocity = Vector2()
-#var near_file_cabinet = false
+var walking = false
+
 
 func _physics_process(delta):
 # Move MinigamePlayer horizontally if a key in 'ad' was pressed
-#
-# Changes MinigamePlayer's sprite from default to run if the MinigamePlayer is pressing 'ad'
-# MinigamePlayer's sprite from run to default if the MinigamePlayer is not pressing 'ad'
-#	open_file()
-	
 	velocity = Vector2()
 	velocity.x += Input.get_action_strength("right")
 	velocity.x -= Input.get_action_strength("left")
@@ -19,15 +14,18 @@ func _physics_process(delta):
 	velocity.x *= speed
 	
 	if (velocity.x == 0):
-		$Sprite.play("default")
+		walking = false
 	else:
-		$Sprite.play("run")
+		walking = true
 	
 	var _i = move_and_slide(velocity)
 
 
-#func open_file():
-## If near_file_cabinet, opens FileCabinet if player presses 'e'
-#	if near_file_cabinet:
-#		if Input.is_action_pressed("interact"):
-#			FileCabinet.call("open", args)
+func _process(delta):
+# Changes MinigamePlayer's sprite from default to run if the MinigamePlayer is pressing 'ad'
+# MinigamePlayer's sprite from run to default if the MinigamePlayer is not pressing 'ad'
+	print(get_node("Sprite/Player Animator").current_animation)
+	if walking and get_node("Sprite/Player Animator").current_animation != "walk":
+		$Sprite.play("walk")
+	elif not walking:
+		$Sprite.play("idle")
