@@ -84,3 +84,4 @@ func _process(delta):
 	if win_game == 3:
 		print("You win!")
 		win_game = 0
+		get_tree().change_scene("res://scenes/Temporal_Lobe.tscn")
